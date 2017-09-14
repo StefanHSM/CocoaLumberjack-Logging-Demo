@@ -14,15 +14,25 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>Zip.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>56917181D32575C60482914CD1BA97A9</key>
+		<key>6365EA7265D2207AC4D88FC044F6A7D8</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
 		<key>9709635CA61F7F72E71552ACC5E71EC3</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>D2AA619C641E34F133C7337C3CB31562</key>
 		<dict>
 			<key>primary</key>
 			<true/>

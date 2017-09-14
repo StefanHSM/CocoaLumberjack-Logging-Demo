@@ -15,10 +15,14 @@
 		AC50C6801F5D8C9600EC2480 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC50C67E1F5D8C9600EC2480 /* LaunchScreen.storyboard */; };
 		AC50C68B1F5D8C9600EC2480 /* LoggingSampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC50C68A1F5D8C9600EC2480 /* LoggingSampleTests.swift */; };
 		AC50C6961F5D8C9600EC2480 /* LoggingSampleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC50C6951F5D8C9600EC2480 /* LoggingSampleUITests.swift */; };
+		AC759AB01F67D550002BF8D6 /* LogUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC759AAF1F67D550002BF8D6 /* LogUtils.swift */; };
+		AC7B80831F62D7ED0071FC64 /* LogFileListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC7B80821F62D7ED0071FC64 /* LogFileListPresenter.swift */; };
+		AC7B80851F62DFD30071FC64 /* LogFileTextPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC7B80841F62DFD30071FC64 /* LogFileTextPresenter.swift */; };
+		ACA15D0C1F6927B300DE4543 /* CustomLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACA15D0B1F6927B300DE4543 /* CustomLogger.swift */; };
+		ACA15D0E1F6944CE00DE4543 /* HSMLogging.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACA15D0D1F6944CE00DE4543 /* HSMLogging.swift */; };
 		ACEC9E8F1F5E809800C4B1B0 /* CustomLogFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACEC9E8E1F5E809800C4B1B0 /* CustomLogFormatter.swift */; };
 		ACEC9E941F5EC6D400C4B1B0 /* LogFileTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACEC9E931F5EC6D400C4B1B0 /* LogFileTableViewController.swift */; };
 		ACEC9E961F5ED38300C4B1B0 /* LogFileTextViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACEC9E951F5ED38300C4B1B0 /* LogFileTextViewController.swift */; };
-		ACF145341F5FED4500F9B84B /* LogUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACF145331F5FED4500F9B84B /* LogUtils.swift */; };
 		ACF145361F6023E100F9B84B /* CustomLogFileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACF145351F6023E100F9B84B /* CustomLogFileManager.swift */; };
 /* End PBXBuildFile section */
 
@@ -56,12 +60,16 @@
 		AC50C6911F5D8C9600EC2480 /* LoggingSampleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LoggingSampleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC50C6951F5D8C9600EC2480 /* LoggingSampleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggingSampleUITests.swift; sourceTree = "<group>"; };
 		AC50C6971F5D8C9600EC2480 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AC759AAF1F67D550002BF8D6 /* LogUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogUtils.swift; sourceTree = "<group>"; };
+		AC7B80821F62D7ED0071FC64 /* LogFileListPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogFileListPresenter.swift; sourceTree = "<group>"; };
+		AC7B80841F62DFD30071FC64 /* LogFileTextPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogFileTextPresenter.swift; sourceTree = "<group>"; };
 		AC7F0F461F5D979C000AF6D7 /* libCocoaLumberjack.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libCocoaLumberjack.a; path = "../../../Library/Developer/Xcode/DerivedData/LoggingSample-gwqsaljwxuhnnhbafbdzrhkndwyo/Build/Products/Debug-iphonesimulator/CocoaLumberjack/libCocoaLumberjack.a"; sourceTree = "<group>"; };
 		AC7F0F471F5D979C000AF6D7 /* libPods-LoggingSample.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libPods-LoggingSample.a"; path = "../../../Library/Developer/Xcode/DerivedData/LoggingSample-gwqsaljwxuhnnhbafbdzrhkndwyo/Build/Products/Debug-iphonesimulator/libPods-LoggingSample.a"; sourceTree = "<group>"; };
+		ACA15D0B1F6927B300DE4543 /* CustomLogger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomLogger.swift; sourceTree = "<group>"; };
+		ACA15D0D1F6944CE00DE4543 /* HSMLogging.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HSMLogging.swift; sourceTree = "<group>"; };
 		ACEC9E8E1F5E809800C4B1B0 /* CustomLogFormatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomLogFormatter.swift; sourceTree = "<group>"; };
 		ACEC9E931F5EC6D400C4B1B0 /* LogFileTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogFileTableViewController.swift; sourceTree = "<group>"; };
 		ACEC9E951F5ED38300C4B1B0 /* LogFileTextViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogFileTextViewController.swift; sourceTree = "<group>"; };
-		ACF145331F5FED4500F9B84B /* LogUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogUtils.swift; sourceTree = "<group>"; };
 		ACF145351F6023E100F9B84B /* CustomLogFileManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomLogFileManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -128,8 +136,12 @@
 			children = (
 				AC50C6751F5D8C9600EC2480 /* AppDelegate.swift */,
 				ACEC9E931F5EC6D400C4B1B0 /* LogFileTableViewController.swift */,
+				AC7B80821F62D7ED0071FC64 /* LogFileListPresenter.swift */,
 				ACEC9E951F5ED38300C4B1B0 /* LogFileTextViewController.swift */,
-				ACF145331F5FED4500F9B84B /* LogUtils.swift */,
+				AC7B80841F62DFD30071FC64 /* LogFileTextPresenter.swift */,
+				AC759AAF1F67D550002BF8D6 /* LogUtils.swift */,
+				ACA15D0D1F6944CE00DE4543 /* HSMLogging.swift */,
+				ACA15D0B1F6927B300DE4543 /* CustomLogger.swift */,
 				ACEC9E8E1F5E809800C4B1B0 /* CustomLogFormatter.swift */,
 				ACF145351F6023E100F9B84B /* CustomLogFileManager.swift */,
 				AC50C6791F5D8C9600EC2480 /* Main.storyboard */,
@@ -314,10 +326,12 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-LoggingSample/Pods-LoggingSample-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/CocoaLumberjack/CocoaLumberjack.framework",
+				"${BUILT_PRODUCTS_DIR}/Zip/Zip.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CocoaLumberjack.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Zip.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -377,11 +391,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ACA15D0E1F6944CE00DE4543 /* HSMLogging.swift in Sources */,
+				ACA15D0C1F6927B300DE4543 /* CustomLogger.swift in Sources */,
 				AC50C6761F5D8C9600EC2480 /* AppDelegate.swift in Sources */,
 				ACEC9E961F5ED38300C4B1B0 /* LogFileTextViewController.swift in Sources */,
 				ACEC9E8F1F5E809800C4B1B0 /* CustomLogFormatter.swift in Sources */,
 				ACF145361F6023E100F9B84B /* CustomLogFileManager.swift in Sources */,
-				ACF145341F5FED4500F9B84B /* LogUtils.swift in Sources */,
+				AC7B80851F62DFD30071FC64 /* LogFileTextPresenter.swift in Sources */,
+				AC759AB01F67D550002BF8D6 /* LogUtils.swift in Sources */,
+				AC7B80831F62D7ED0071FC64 /* LogFileListPresenter.swift in Sources */,
 				ACEC9E941F5EC6D400C4B1B0 /* LogFileTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

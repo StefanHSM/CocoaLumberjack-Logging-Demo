@@ -15,38 +15,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        // setup for logging with cocoalumberjack
-        // sharing files with itunes is intentionally limited to debugging. take a loot at "targets > build phases > run script".
-
-        // set custom log formatter, see class LogFormatter.swift
-        DDASLLogger.sharedInstance.logFormatter = CustomLogFormatter()
-        DDTTYLogger.sharedInstance.logFormatter = CustomLogFormatter()
         
-        // add apple system logger & console logger
-        DDLog.add(DDASLLogger.sharedInstance)
-        DDLog.add(DDTTYLogger.sharedInstance)
+        LogManager.logger = CustomLogger()
+        LogManager.logLevel = .verbose
+        LogUtils().setupLogger(logLevel: DDLogLevel.verbose, addASLLogger: false, addTTYLogger: true)
         
-        // create log file manager and set documents directory as logs directory (for retrieval with iTunes)
-        let logFileManager = CustomLogFileManager.init(logsDirectory: LogUtils().getDocumentsDirectoryPath().relativePath)
-    
-        // create and configure file logger
-        let fileLogger: DDFileLogger = DDFileLogger(logFileManager: logFileManager)
-        fileLogger.rollingFrequency = 60 * 60 * 24 // create log file at least every 24 hours
-        fileLogger.logFileManager.maximumNumberOfLogFiles = 14 // create log files for the last two weeks
-        fileLogger.maximumFileSize = 1024 * 1024 // limit file size to 1 MB
-        fileLogger.logFormatter = CustomLogFormatter()
-        // fileLogger.doNotReuseLogFiles = true // when set, will always create a new log file at app launch
-        
-        // add file logger
-        DDLog.add(fileLogger)
-        // DDLog.add(fileLogger, with:DDLogLevel.debug) // filter the logs by log level
-
-        // use logging example (in descending log level order)
-        DDLogVerbose("Verbose");
-        DDLogDebug("Debug");
-        DDLogInfo("Info");
-        DDLogWarn("Warning");
-        DDLogError("Error");
+        if let root = window?.rootViewController as? LogFileTableViewController {
+            root.presenter = LogFileListPresenter()
+            root.presenter.view = root
+        }
         
         return true
     }
@@ -72,7 +49,5 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationWillTerminate(_ application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
-
-
 }
 

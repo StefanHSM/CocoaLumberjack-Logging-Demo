@@ -9,24 +9,24 @@
 import Foundation
 import CocoaLumberjack
 
-// Class for creating custom log file names
+/// Create custom log file names
 class CustomLogFileManager: DDLogFileManagerDefault {
+    let dateFormat = "yyyy-MM-dd-HH:mm:ss"
+    
     override var newLogFileName: String! {
-        get {
-            return String(format: "%@ %@.log", getAppName(), getTimeStamp())
-        }
+        return String(format: "%@ %@.log", getAppName(), getTimeStamp())
     }
     
-    override func isLogFile(withName fileName: String!) -> Bool {
-        return false
+    override func isLogFile(withName _: String!) -> Bool {
+        return true
     }
     
     func getTimeStamp() -> String {
         let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "dd.MM.YYYY-HH:mm:ss"
+        dateFormatter.dateFormat = dateFormat
         return dateFormatter.string(from: Date())
     }
-
+    
     func getAppName() -> String {
         return Bundle.main.object(forInfoDictionaryKey: "CFBundleIdentifier") as! String
     }

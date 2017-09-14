@@ -41,18 +41,26 @@
                             <outlet property="delegate" destination="9en-JQ-YsV" id="hx2-rb-2Cf"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Log Files" id="11X-4n-PfJ">
-                        <barButtonItem key="leftBarButtonItem" title="Add some logs" id="Gw7-hA-GeC">
+                    <toolbarItems>
+                        <barButtonItem title="Add test logs" id="Gw7-hA-GeC">
                             <connections>
                                 <action selector="addTestLogsWithSender:" destination="9en-JQ-YsV" id="FKC-IO-6mH"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" title="Finish log file" id="JL2-ix-g7c">
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="QVp-Mm-dhA"/>
+                        <barButtonItem title="Archive log" id="JL2-ix-g7c">
                             <connections>
                                 <action selector="rollLogFileWithSender:" destination="9en-JQ-YsV" id="4v0-1b-DDS"/>
                             </connections>
                         </barButtonItem>
-                    </navigationItem>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="74h-hu-XAQ"/>
+                        <barButtonItem title="Send as zip" id="UhY-pS-ERO">
+                            <connections>
+                                <action selector="mailAllZippedLogsWithSender:" destination="9en-JQ-YsV" id="pR4-GJ-w8t"/>
+                            </connections>
+                        </barButtonItem>
+                    </toolbarItems>
+                    <navigationItem key="navigationItem" title="Log Files" id="11X-4n-PfJ"/>
                     <connections>
                         <segue destination="qGI-pA-XRO" kind="show" identifier="TextViewSegue" id="vDh-e0-YHf"/>
                     </connections>
@@ -83,13 +91,20 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Log File" id="D0c-uP-QJT">
-                        <barButtonItem key="rightBarButtonItem" systemItem="action" id="SZQ-G8-VdZ">
+                    <toolbarItems>
+                        <barButtonItem title="Send as attachment" id="qtL-z4-HCj">
+                            <connections>
+                                <action selector="mailWithAttachmentWithSender:" destination="qGI-pA-XRO" id="bIU-af-ZJt"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="ss1-VD-YgE"/>
+                        <barButtonItem title="Share as text" id="SZQ-G8-VdZ">
                             <connections>
                                 <action selector="shareLogFileWithSender:" destination="qGI-pA-XRO" id="UU5-L3-dkB"/>
                             </connections>
                         </barButtonItem>
-                    </navigationItem>
+                    </toolbarItems>
+                    <navigationItem key="navigationItem" title="Log File" id="D0c-uP-QJT"/>
                     <connections>
                         <outlet property="textView" destination="4Rv-31-gyA" id="bZ9-4u-Hf8"/>
                     </connections>
@@ -101,13 +116,17 @@
         <!--Navigation Controller-->
         <scene sceneID="Wy1-LU-uxa">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="RNB-rT-B2q" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" toolbarHidden="NO" id="RNB-rT-B2q" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="vKz-xi-YLx">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="yOe-bZ-UCz">
+                        <rect key="frame" x="0.0" y="623" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </toolbar>
                     <connections>
                         <segue destination="9en-JQ-YsV" kind="relationship" relationship="rootViewController" id="f8e-SO-ujd"/>
                     </connections>
